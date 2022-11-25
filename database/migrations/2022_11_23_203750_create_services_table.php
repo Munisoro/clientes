@@ -17,9 +17,9 @@ class CreateServicesTable extends Migration
             $table->id();
             $table->string('nombre');
             $table->float('precio');
-            $table->string('velocidad');
             $table->string('limit_at');
-            //$table->string('');
+            $table->string('max_limit');
+            $table->foreignId('network_id')->constrained();
             $table->timestamps();
         });
     }

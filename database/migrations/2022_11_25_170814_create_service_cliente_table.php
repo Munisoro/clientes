@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRoutersTable extends Migration
+class CreateServiceClienteTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,12 @@ class CreateRoutersTable extends Migration
      */
     public function up()
     {
-        Schema::create('routers', function (Blueprint $table) {
-            $table->id();
-            $table->string('nombre');
+        Schema::create('service_cliente', function (Blueprint $table) {
+            $table->foreignId('service_id')->constrained();
+            $table->foreignId('cliente_id')->constrained();
             $table->ipAddress('ip');
-            $table->string('usuario');
-            $table->string('marca');
-            $table->string('clave');
-            $table->timestamps();
+            $table->macAddress('mac');
+            $table->date('fecha_inst');
         });
     }
 
@@ -31,6 +29,6 @@ class CreateRoutersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('routers');
+        Schema::dropIfExists('service_cliente');
     }
 }
