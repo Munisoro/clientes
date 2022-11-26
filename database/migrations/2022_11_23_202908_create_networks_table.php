@@ -15,7 +15,7 @@ class CreateNetworksTable extends Migration
     {
         Schema::create('networks', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre');
+            $table->string('name');
             $table->string('red');
             $table->string('cidr');
             $table->string('tipo');
@@ -31,6 +31,6 @@ class CreateNetworksTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ipv4networks');
+        Schema::dropIfExists('networks');
     }
 }

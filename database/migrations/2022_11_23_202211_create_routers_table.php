@@ -16,10 +16,10 @@ class CreateRoutersTable extends Migration
         Schema::create('routers', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
-            $table->ipAddress('ip');
             $table->string('usuario');
-            $table->string('marca');
             $table->string('clave');
+            $table->string('marca');
+            $table->ipAddress('ip');
             $table->timestamps();
         });
     }
