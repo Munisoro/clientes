@@ -46,7 +46,7 @@
               <p>Inicio</p>
             </a>
           </li>
-          
+
             <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-sitemap"></i>
@@ -111,6 +111,27 @@
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
+    </div>
+
+
+
+    <div class="sidebar" style="">
+      <div class="user-panel pb-3 d-flex">
+
+      </div>
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <li class="nav-item">
+            <a id="close-link" href="{{route('logout')}}" class="nav-link " onclick="event.preventDefault();document.getElementById('close-sesion').submit();">
+                <form id="close-sesion" action="{{route('logout')}}" method="POST">
+                    @csrf
+                    <i class="nav-icon fas fa-door-open"></i>
+                    <p>Cerrar Sesion</p>
+                </form>
+            </a>
+          </li>
+        </ul>
+      </nav>
     </div>
     <!-- /.sidebar -->
   </aside>

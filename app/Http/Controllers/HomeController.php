@@ -24,6 +24,5 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
-        //return ['uwu' => 10];
     }
 }
