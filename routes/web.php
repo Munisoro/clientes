@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+//use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,3 +20,13 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/equipos', function() {
+    return 'uwu';
+})->name('equipos');
+
+Route::get('/planes', function() {
+    return 'mrk el que lo lea';
+})->name('planes');
+
+Route::view('/routers', 'routers.lista')->name('routers');
