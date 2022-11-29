@@ -1,0 +1,9 @@
+.tooltablas{
+    position: absolute;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.grupotabla{
+    margin-left: 10px;
+}
